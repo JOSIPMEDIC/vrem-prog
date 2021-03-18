@@ -25,7 +25,7 @@ const weekDaysFull = [
 
 function NextDays(props) {
 	const [days, setDays] = useState([]);
-	const [today, setToday] = useState();
+	const [today, setToday] = useState(0);
 	const { url, path } = useRouteMatch();
 	const [indexDay, setIndexDay] = useState(0);
 	let now = new Date().getHours() - 1;
