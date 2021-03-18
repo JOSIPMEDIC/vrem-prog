@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/vrem-prog/static/css/main.9010bdf7.chunk.css",
-    "main.js": "/vrem-prog/static/js/main.00cab431.chunk.js",
-    "main.js.map": "/vrem-prog/static/js/main.00cab431.chunk.js.map",
+    "main.js": "/vrem-prog/static/js/main.f9a2fb3b.chunk.js",
+    "main.js.map": "/vrem-prog/static/js/main.f9a2fb3b.chunk.js.map",
     "runtime-main.js": "/vrem-prog/static/js/runtime-main.649e5935.js",
     "runtime-main.js.map": "/vrem-prog/static/js/runtime-main.649e5935.js.map",
     "static/css/2.150d169a.chunk.css": "/vrem-prog/static/css/2.150d169a.chunk.css",
-    "static/js/2.22c10296.chunk.js": "/vrem-prog/static/js/2.22c10296.chunk.js",
-    "static/js/2.22c10296.chunk.js.map": "/vrem-prog/static/js/2.22c10296.chunk.js.map",
+    "static/js/2.247b4060.chunk.js": "/vrem-prog/static/js/2.247b4060.chunk.js",
+    "static/js/2.247b4060.chunk.js.map": "/vrem-prog/static/js/2.247b4060.chunk.js.map",
     "index.html": "/vrem-prog/index.html",
     "static/css/2.150d169a.chunk.css.map": "/vrem-prog/static/css/2.150d169a.chunk.css.map",
     "static/css/main.9010bdf7.chunk.css.map": "/vrem-prog/static/css/main.9010bdf7.chunk.css.map",
-    "static/js/2.22c10296.chunk.js.LICENSE.txt": "/vrem-prog/static/js/2.22c10296.chunk.js.LICENSE.txt"
+    "static/js/2.247b4060.chunk.js.LICENSE.txt": "/vrem-prog/static/js/2.247b4060.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.649e5935.js",
     "static/css/2.150d169a.chunk.css",
-    "static/js/2.22c10296.chunk.js",
+    "static/js/2.247b4060.chunk.js",
     "static/css/main.9010bdf7.chunk.css",
-    "static/js/main.00cab431.chunk.js"
+    "static/js/main.f9a2fb3b.chunk.js"
   ]
 }
