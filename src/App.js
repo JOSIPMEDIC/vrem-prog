@@ -2,7 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CurrentWeather from "./components/CurrentWeather";
 import NextDays from "./components/NextDays";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import "./app.css";
 import { useState } from "react";
 
@@ -32,7 +32,7 @@ const cities = [
 function App() {
 	const [index, setIndex] = useState(0);
 	return (
-		<Router>
+		<BrowserRouter>
 			<Switch>
 				<Route exact path="/">
 					<Container fluid="xl">
@@ -74,7 +74,7 @@ function App() {
 					</Route>
 				))}
 			</Switch>
-		</Router>
+		</BrowserRouter>
 	);
 }
 
