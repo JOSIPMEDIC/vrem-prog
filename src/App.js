@@ -2,7 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CurrentWeather from "./components/CurrentWeather";
 import NextDays from "./components/NextDays";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./app.css";
 import { useState } from "react";
 
