@@ -69,7 +69,7 @@ function App() {
 							key={cities[index].name}
 							city={cities[index].name}
 							lat={cities[index].lat}
-							lon={cities[index].lat}
+							lon={cities[index].lon}
 						/>
 					</Route>
 				))}
