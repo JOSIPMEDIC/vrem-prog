@@ -4,7 +4,7 @@ import CurrentWeather from "./components/CurrentWeather";
 import NextDays from "./components/NextDays";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import "./app.css";
-import { useState } from "react";
+import HourlyWeather from "./components/HourlyWeather";
 
 const cities = [
 	{
@@ -29,8 +29,25 @@ const cities = [
 	},
 ];
 
+const weekDaysFull = [
+	"Nedjelja",
+	"Ponedjeljak",
+	"Utorak",
+	"Srijeda",
+	"Četvrtak",
+	"Petak",
+	"Subota",
+];
+
+const weekDays = ["ned", "pon", "uto", "sri", "čet", "pet", "sub"];
+
 function App() {
-	const [index, setIndex] = useState(0);
+	let now = new Date().getHours() - 1;
+	let tillMidnight = 24 - now;
+	let nextMidnight = tillMidnight + 24;
+	const date = new Date();
+	const dayWeek = date.getDay();
+
 	return (
 		<BrowserRouter>
 			<Switch>
@@ -45,9 +62,6 @@ function App() {
 									<Link
 										style={{
 											textDecoration: "none",
-										}}
-										onClick={() => {
-											setIndex(i);
 										}}
 										to={`/${town.name}`}
 									>
@@ -64,15 +78,32 @@ function App() {
 					</Container>
 				</Route>
 				{cities.map((town) => (
-					<Route exact path={`/${cities[index].name}`}>
+					<Route exact path={`/${town.name}`}>
 						<NextDays
-							key={cities[index].name}
-							city={cities[index].name}
-							lat={cities[index].lat}
-							lon={cities[index].lon}
+							key={town.name}
+							city={town.name}
+							lat={town.lat}
+							lon={town.lon}
 						/>
 					</Route>
 				))}
+
+				{cities.map((city) =>
+					weekDays.map((day, i) => {
+						return (
+							<Route key={day} exact path={`/${city.name}/${day}`}>
+								<HourlyWeather
+									now={i === dayWeek ? 1 : tillMidnight}
+									tillMidnight={i === dayWeek ? tillMidnight : nextMidnight}
+									lat={city.lat}
+									lon={city.lon}
+									weekDaysFull={weekDaysFull[i]}
+									city={city.name}
+								/>
+							</Route>
+						);
+					})
+				)}
 			</Switch>
 		</BrowserRouter>
 	);

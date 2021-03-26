@@ -13,7 +13,7 @@ function City(props) {
 	useEffect(() => {
 		const fetchWeather = async () => {
 			const res = await axios(
-				`https://api.openweathermap.org/data/2.5/onecall?lat=${props.lat}&lon=${props.lon}&exclude=minutely,hourly,daily,alerts&appid=66ee595de65ccc06d616d113abe9858e&units=metric
+				`https://api.openweathermap.org/data/2.5/onecall?lat=${props.lat}&lon=${props.lon}&exclude=minutely,hourly,daily,alerts&appid=&units=metric
 `
 			);
 			setTemperature(Math.round(res.data.current.temp));

@@ -9,7 +9,7 @@ const HourlyWeather = ({ lat, lon, now, tillMidnight, weekDaysFull, city }) => {
 	useEffect(() => {
 		const fetchWeather = async () => {
 			const res = await axios(
-				`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,daily,alerts&appid=66ee595de65ccc06d616d113abe9858e&units=metric&lang=hr`
+				`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,daily,alerts&appid=&units=metric&lang=hr`
 			);
 			setHours(res.data.hourly);
 		};
